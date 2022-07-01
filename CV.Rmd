@@ -1,0 +1,61 @@
+---
+name: "`r vars$name`"
+surname: "`r vars$surname `"
+position: "`r vars$position `"
+address: "`r vars$address `"
+phone: "`r vars$phone `"
+www: "`r vars$www `"
+email: "`r vars$email `"
+twitter: "`r vars$twitter `"
+github: "`r vars$github`"
+linkedin: "`r vars$linkedin `"
+output: vitae::awesomecv
+header-includes: |
+  \AtBeginDocument{\pagenumbering{gobble}}
+---
+```{r Setup, include=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+packages <- c("vitae", "tibble", "magrittr", "glue", "readr", "here")
+lapply(packages, require, character.only = TRUE)
+source(file = here("R","Data.R"))
+```
+
+Skills
+======
+```{r Skills}
+skills %>% detailed_entries(with = area, what = skill_list, why = detail,)
+```
+
+Education
+=========
+```{r Education}
+education %>% 
+  detailed_entries(
+    with = institution,
+    what = degree,
+    where = where,
+    when = year,
+    why = comment,
+    .protect = FALSE
+)
+```
+
+Courses and Certifications
+==========================
+```{r Certifications}
+certification %>% detailed_entries(
+  with  = name,
+  what  = comment,
+  where = where,
+  when  = year,
+  why   = detail,
+)
+```
+
+Languages
+=========
+```{r Languares}
+languages %>% brief_entries(when = language, what = level, )
+```
+
+\fancyfoot[C]{\color{gray}\tiny I hereby give consent for my personal data included in the application to be processed for the purposes of the recruitment processes during which I have sent this document.}
