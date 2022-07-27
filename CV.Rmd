@@ -49,6 +49,7 @@ certification %>% detailed_entries(
   where = where,
   when  = year,
   why   = detail,
+  .protect = FALSE
 )
 ```
 

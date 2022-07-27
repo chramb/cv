@@ -10,7 +10,10 @@
 #
 
 # CERTIFICATES & COURSES
-CAE_Full_Name <-"Certificate in Advanced English (CAE)"
+CAE_Full_Name <- "Certificate in Advanced English (CAE)"
+
+OCI_Full_Name <- "\\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=ABF4D1905D3FCABD18A63FA8F32A85125B02A26D9E45FD761C933636D22759CC}{Oracle Cloud Infrastructure (2022)}"
+OCI_Comment   <- "\\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=ABF4D1905D3FCABD18A63FA8F32A85125B02A26D9E45FD761C933636D22759CC}{Certified Foundations Assisociate}"
 
 certification <- tribble(
  # with what where when why
@@ -18,6 +21,7 @@ certification <- tribble(
   CAE_Full_Name, "Grade A - C2 level","" ,2018, NA,
   "Cisco CCNA" , "Badges:", "" ,2022, "Introduction to networking",
   "Cisco CCNA" , "Badges:", "" ,2022, "Routing, and Wireless Essentials",
+  OCI_Full_Name, OCI_Comment, "", 2022, NA,
 )
 
 # SKILLS
