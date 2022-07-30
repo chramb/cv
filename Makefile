@@ -15,7 +15,17 @@ TWITTER	 ?= jsmith
 GITHUB	 ?= jsmith
 LINKEDIN ?= jsmith
 
-CV_VARS	 = vars <- data.frame(name = '$(NAME)', surname = '$(SURNAME)',  position = '$(POSITION)', address = '$(ADDRESS)', phone = '$(PHONE)', www = '$(WWW)', email = '$(EMAIL)', twitter = '$(TWITTER)', github = '$(GITHUB)', linkedin = '$(LINKEDIN)')
+CV_VARS	 = vars <- data.frame(\
+			name = '$(NAME)',\
+			surname = '$(SURNAME)',\
+			position = '$(POSITION)',\
+			address = '$(ADDRESS)',\
+			phone = '$(PHONE)',\
+			www = '$(WWW)',\
+			email = '$(EMAIL)',\
+			twitter = '$(TWITTER)',\
+			github = '$(GITHUB)',\
+			linkedin = '$(LINKEDIN)')
 
 .PHONY: clean all default
 
