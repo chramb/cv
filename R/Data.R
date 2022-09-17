@@ -37,6 +37,10 @@ skills <- tribble(
   "Experienced managing servers, by writing idempotent playbooks with both push
   and pull modes. Familiar with jinja2 templating language 
   as well as writing simple custom modules in Python.",
+  "", # Automation
+  "Terraform",
+  "Familiar with infrastructure as code metodology, managing cloud as well as
+  local resources with Terraform Modules, self written or provided upstream.",
 
   "Programming/Scripting Languages", 
   "POSIX SH, BASH, R, Lua, Python(Beginner/Scripting)",
