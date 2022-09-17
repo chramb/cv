@@ -10,8 +10,12 @@
 #
 
 # CERTIFICATES & COURSES
+## CAE
 CAE_Full_Name <- "Certificate in Advanced English (CAE)"
-
+## Cisco
+CISCO_Intro <- "\\href{https://www.credly.com/badges/a264b2af-b0ec-477b-8cbb-3c92c5752368/public_url}{Introduction to networking}"
+CISCO_Route <- "\\href{https://www.credly.com/badges/5f4f2a98-8f70-4464-bc05-db8e57d137ca/public_url}{Routing, and Wireless Essentials}"
+## OCI
 OCI_Full_Name <- "\\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=ABF4D1905D3FCABD18A63FA8F32A85125B02A26D9E45FD761C933636D22759CC}{Oracle Cloud Infrastructure (2022)}"
 OCI_Comment   <- "\\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=ABF4D1905D3FCABD18A63FA8F32A85125B02A26D9E45FD761C933636D22759CC}{Certified Foundations Assisociate}"
 
@@ -19,8 +23,8 @@ certification <- tribble(
  # with what where when why
   ~name, ~comment, ~where, ~year, ~detail,
   CAE_Full_Name, "Grade A - C2 level","" ,2018, NA,
-  "Cisco CCNA" , "Badges:", "" ,2022, "Introduction to networking",
-  "Cisco CCNA" , "Badges:", "" ,2022, "Routing, and Wireless Essentials",
+  "Cisco CCNA" , "Badges:", "" ,2022, CISCO_Intro,
+  "Cisco CCNA" , "Badges:", "" ,2022, CISCO_Route,
   OCI_Full_Name, OCI_Comment, "", 2022, NA,
 )
 
