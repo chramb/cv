@@ -1,4 +1,4 @@
-# \\href{http://www.ericrscott.com/}{my website}") <- hidden links "hack"
+# \\href{https://example.com}{website}") <- hidden links "hack"
 #
 # # Fancy Colors
 # with  = Bold primary (top left)
