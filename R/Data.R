@@ -43,7 +43,7 @@ skills <- tribble(
   local resources with Terraform Modules, self written or provided upstream.",
 
   "Programming/Scripting Languages", 
-  "POSIX SH, BASH, R, Lua, Python(Beginner/Scripting)",
+  "POSIX SH, BASH, R, Lua",
   "Able to write secure scripts aimed to simplify and automate various workflows.",
 
   "Operating Systems", 
