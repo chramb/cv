@@ -29,14 +29,13 @@ CV_VARS	 = vars <- data.frame(\
 
 .PHONY: clean all default
 
-all: default render
+all: default
 
-default:
+default: CV.pdf
+
+CV.pdf: CV.Rmd R/Data.R
 	@echo "Found Rscipt binary in: $(RSCRIPT)"
-
-render:
 	@$(RSCRIPT) -e "$(CV_VARS); rmarkdown::render('$(CV_FILE)')"
 
 clean:
 	@$(shell command -v rm) -f $(OUTFILE)
-	
