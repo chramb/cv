@@ -64,6 +64,9 @@ skills <- tribble(
   "Running in rootfull and rootless modes, with restricted resources and
   managed capabilities.",
   "Containerization", "Docker, Podman",
+  "Knowledge of and understanding the underlying techlogies of Linux containers 
+  such as cgroups and namespaces.",
+  "Containerization", "Docker, Podman",
   "Automation of container management with tools such as Ansible and systemd services.",
 
   "Version Control",
