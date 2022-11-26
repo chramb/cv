@@ -1,7 +1,13 @@
+# R
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
+# Pandoc
+*.tex
+*.log
+
+# Makefile
 *.pdf
 make.sh
