@@ -55,8 +55,14 @@ certification %>% detailed_entries(
 
 Languages
 =========
-```{r Languares}
+```{r Languages}
 languages %>% brief_entries(when = language, what = level, )
+```
+
+Hobbies
+=======
+```{r Hobbies}
+hobbies %>% brief_entries(what = what, )
 ```
 
 \fancyfoot[C]{\color{gray}\tiny I hereby give consent for my personal data included in the application to be processed for the purposes of the recruitment processes during which I have sent this document.}

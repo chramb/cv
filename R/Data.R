@@ -1,6 +1,6 @@
 # \\href{https://example.com}{website}") <- hidden links "hack"
 #
-# # Fancy Colors
+# # Detailed Entries
 # with  = Bold primary (top left)
 # what  = One below (h2, top left)
 # where = Red Right (top right)
@@ -10,42 +10,51 @@
 #
 
 # CERTIFICATES & COURSES
-## CAE
-CAE_Full_Name <- "Certificate in Advanced English (CAE)"
-## Cisco
-CISCO_Intro <- "\\href{https://www.credly.com/badges/a264b2af-b0ec-477b-8cbb-3c92c5752368/public_url}{Introduction to networking}"
-CISCO_Route <- "\\href{https://www.credly.com/badges/5f4f2a98-8f70-4464-bc05-db8e57d137ca/public_url}{Routing, and Wireless Essentials}"
-## OCI
-OCI_Full_Name <- "\\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=ABF4D1905D3FCABD18A63FA8F32A85125B02A26D9E45FD761C933636D22759CC}{Oracle Cloud Infrastructure (2022)}"
-OCI_Comment   <- "\\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=ABF4D1905D3FCABD18A63FA8F32A85125B02A26D9E45FD761C933636D22759CC}{Certified Foundations Assisociate}"
-
 certification <- tribble(
  # with what where when why
   ~name, ~comment, ~where, ~year, ~detail,
-  CAE_Full_Name, "Grade A - C2 level","" ,2018, NA,
-  "Cisco CCNA" , "Badges:", "" ,2022, CISCO_Intro,
-  "Cisco CCNA" , "Badges:", "" ,2022, CISCO_Route,
-  OCI_Full_Name, OCI_Comment, "", 2022, NA,
+  "Certificate in Advanced English (CAE)", "Grade A - C2 level","" ,2018, NA,
+  "A Cloud Guru / Linux Academy", "courses:", NA, 2023, "\\href{https://verify.acloud.guru/44D8A10C44AA}{Linux Foundation Certified Engineer}",
+  "A Cloud Guru / Linux Academy", "courses:", NA, 2023, "\\href{https://verify.acloud.guru/4AE42CF570C4}{Linux Foundation Certified Systems Administrator (LFCS)}",
+  "A Cloud Guru / Linux Academy", "courses:", NA, 2023, "\\href{https://verify.acloud.guru/3EF700150D38}{Docker Certified Associate (DCA)}",
+  "A Cloud Guru / Linux Academy", "courses:", NA, 2023, "\\href{https://verify.acloud.guru/D02EBD29B1DF}{Certified Kubernetes Administrator (CKA)}",
+  "A Cloud Guru / Linux Academy", "courses:", NA, 2023, "\\href{https://verify.acloud.guru/E47FDAAC7746}{Certified Kubernetes Application Developer (CKAD)}",
 )
 
 # SKILLS
 skills <- tribble(
  # with   what         why
   ~area, ~skill_list, ~detail,
+  # Automation
   "Automation",
-  "Ansible",
+  "Ansible, OpenTofu/Terraform",
   "Experienced managing servers, by writing idempotent playbooks with both push
   and pull modes. Familiar with jinja2 templating language 
   as well as writing simple custom modules in Python.",
-  "", # Automation
-  "Terraform",
+
+  "Automation",
+  "Ansible, OpenTofu/Terraform",
   "Familiar with infrastructure as code metodology, managing cloud as well as
   local resources with Terraform Modules, self written or provided upstream.",
 
-  "Programming/Scripting Languages", 
-  "POSIX SH, BASH, R, Lua",
+  # Programming
+  "Programming", 
+  "POSIX SH, BASH, R, Lua, Python, Go",
   "Able to write secure scripts aimed to simplify and automate various workflows.",
 
+  "Programming", 
+  "POSIX SH, BASH, R, Lua, Python, Go",
+  "Familiar with exploring large project codebases in order to find and fix bugs and issues.",
+
+  "Programming", 
+  "POSIX SH, BASH, R, Lua, Python, Go",
+  "Experienced in writing simple stateless web-services with WSGI, ASGI or Go standard library.",
+
+  "Programming", 
+  "POSIX SH, BASH, R, Lua, Python, Go",
+  "Experience using Version Control as well as platforms integrating it to aid in collaboration such as GitHub and Gerrit.",
+  
+  # Operating Systems
   "Operating Systems", 
   "Linux - RPM based as well as likes of Alpine and Gentoo", 
   "Knowledge of building blocks of Linux operating system, such as kernel,
@@ -53,25 +62,36 @@ skills <- tribble(
   tooling, as well as practical experience managing and securely maintaining 
   servers.",
 
-  "Virtualization",
-  "Libvirt, QEMU, KVM",
-  "Able to perform basic operations managing virtual machines with above 
-  mentioned tooling such as installation, manual and automated configuration 
-  (essentials of cloud-init), cloning, migrating, preparing custom images and 
-  general maintenance.",
+  "Operating Systems", 
+  "Linux - RPM based as well as likes of Alpine and Gentoo", 
+  "In spare time engaging with and supporting users of communities on platforms like Discord or IRC.",
 
-  "Containerization","Docker, Podman",
-  "Running in rootfull and rootless modes, with restricted resources and
-  managed capabilities.",
-  "Containerization", "Docker, Podman",
+  # Virtualization
+  "Cloud",
+  "OpenStack",
+  "Deployment and usage of main components of OpenStack.",
+
+  "Cloud",
+  "OpenStack",
+  "Developed a solution to practice and test bare metal deployment of OpenStack (Mirantis MOSK) 
+  with the use of Virtual Machines of existing OpenStack cloud.",
+
+  NA,
+  "Virtualization - Libvirt, QEMU, KVM",
+  "Able to manage virtual machines with above mentioned tooling 
+  such as installation, manual and automated configuration,
+  with the inclusion of advanced features such as device passthrough 
+  and usage of various virtio solutions.",
+
+  # Containerization
+  NA, "Containerization - LXC, Docker, Kubernetes",
   "Knowledge of and understanding the underlying techlogies of Linux containers 
   such as cgroups and namespaces.",
-  "Containerization", "Docker, Podman",
-  "Automation of container management with tools such as Ansible and systemd services.",
 
-  "Version Control",
-  "Git, GitHub",
-  NA
+  NA, "Containerization - LXC, Docker, Kubernetes",
+  "Understanding of deployment and basic administration of self managed kubernetes distributions
+  such as k0s and its underyling technologies such as CNI, CSI and various patterns it uses.",
+
 )
 
 languages <- tribble(
@@ -86,7 +106,25 @@ education <- tribble(
   ~institution, ~degree, ~where, ~year, ~comment,
   "Wrocław University of Science and Technology",
   "Bachelor's degree in Cybersecurity", "Wrocław, Poland",
-  "2020 - PRESENT", "Member of \\href{https://asi.wroclaw.pl/}{Academic Computer Science Society (ASI)}"
+  "2020 - 2024", 
+  "Member of \\href{https://asi.wroclaw.pl/}{Academic Computer Science Society (ASI)}",
+
+  "Wrocław University of Science and Technology",
+  "Bachelor's degree in Cybersecurity", "Wrocław, Poland",
+  "2020 - 2024", 
+  "Organizer of 17th and 18th \\href{https://sesja.linuksowa.pl}{Linux Session} - Polish conference about Open Source",
+
+  
+  "AGH University of Krakow",
+  "Master's degree in Cybersecurity", "Kraków, Poland",
+  "2024 - PRESENT", NA,
 )
 
+# HOBBIES
+hobbies <- tribble(
+  ~what,
+  "Recovering Magic: the Gathering player",
+  "Homelab Enthusiast",
+  "Begginer Bachata Dancer",
+)
 
